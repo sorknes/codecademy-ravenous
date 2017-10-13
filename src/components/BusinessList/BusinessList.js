@@ -19,10 +19,10 @@ class BusinessList extends React.Component {
 		return (
 			<div className="BusinessList">
 				{ /* callback function with one parameter */ }
-        { this.props.businesses.map((business) => {
+        { this.props.businesses.map(business => {
 					// return needs (); because <Business /> instance have multiple lines
           return (
-            <Business business={ business }/>
+            <Business business={ business } key={business.id} />
           );
         }) }
       </div>			
